@@ -1,0 +1,15 @@
+.idea
+.storybook
+.node_modules_prod
+.vscode
+coverage
+dist
+documents
+__mocks__
+coverage
+docs
+node_modules
+public
+src/**/**/*.md
+styleguide.config.js
+lib

@@ -1,0 +1,21 @@
+.DS_STORE
+
+#Project Specific Ignores
+node_modules
+.node_modules_prod/
+build/
+coverage/
+package-lock.json
+lib/
+dist/
+
+# Generic Ignores
+.module-cache
+*.log*
+*.sublime-project
+*.sublime-workspace
+.idea
+*.iml
+.vscode
+*.swp
+*.swo

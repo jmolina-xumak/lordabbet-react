@@ -1,0 +1,5 @@
+export const GA_PROD_KEY = 'UA-16021082-11';
+export const GA_KEY = 'UA-16021082-16';
+export const BRIGHTCOVE_ACCOUNT = '5966354514001';
+export const BRIGHTCOVE_GENERIC_PLAYER = 'aj20tfEUTW';
+export const BRIGHTCOVE_PLAYER = '1HBeBXG1K'
