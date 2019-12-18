@@ -3,7 +3,8 @@ import ReactDOM from 'react-dom';
 import ArticleHeader from './components/ArticleHeader/index.js';
 import ImageComponent from './components/ImageComponent/index.js';
 import PromotionalComponent from './components/PromotionalBlock/index.js';
-
+import TextComponent from './components/Text/index.js';
+import { Grid } from '@material-ui/core';
 
 			
 var xmlhttp = new XMLHttpRequest();
@@ -11,20 +12,55 @@ var url = "";
 var path = url+window.location.pathname.replace(/html$/,"json")
 console.log("The URL of this page is: " + path);
 
-function render(json) {
+function render(result) {
   
-  var obj = JSON.parse(json);
+  var json = JSON.parse(result);
 	
   var dataImage={data:{}};	
   var dataPromotional={data:{}};
-	
-  dataImage.data=obj.data.imageContentReferenceData;
-  dataPromotional.data=obj.data.contentFragmentContentReference2Data;
+  var dataText1={data:{text:""}};
+  var dataText2={data:{text:""}};
+  var dataText3={data:{text:""}};
 
-  		console.log(dataImage);
-  ReactDOM.render(<div style={{width: 10 + 'em'}}>
-				  	<ImageComponent  {...dataImage} />
-				  	<PromotionalComponent  {...dataPromotional} />
+
+  var previous;
+  for (var p in json.data) {
+
+    if (json.data[p]=="Image")
+    {
+        console.log("Add Image");
+        console.log(json.data[previous]);
+    }
+
+    if (json.data[p]=="Promotional")
+    {
+        console.log("Add Promotional");
+        console.log(json.data[previous]);
+     }
+
+    previous=p;
+
+  }
+
+
+  dataImage.data=json.data.imageContentReferenceData;
+  dataPromotional.data=json.data.contentFragmentContentReference2Data;
+  dataText1.data.text=json.data.section1;
+  dataText2.data.text=json.data.section2;
+  dataText3.data.text=json.data.section3;
+
+  ReactDOM.render(<div>
+                    <Grid container>
+                      <Grid item xs={12} lg={10} xl={1}>
+                        <ImageComponent  {...dataImage} />
+                        <TextComponent  {...dataText1} />
+                        <TextComponent  {...dataText2} />
+                        <TextComponent  {...dataText3} />
+                      </Grid>
+                    <Grid item xs={12} lg={2} xl={1}>
+                        <PromotionalComponent  {...dataPromotional} />
+                    </Grid>
+                    </Grid>
 				  </div>,
 				  document.getElementById('root'));
 }
@@ -37,4 +73,6 @@ xmlhttp.onreadystatechange = function() {
 };
 xmlhttp.open("GET", path, true);
 xmlhttp.send();
-	
+
+
+
