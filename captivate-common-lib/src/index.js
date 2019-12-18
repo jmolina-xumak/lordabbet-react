@@ -23,6 +23,7 @@ function render(json) {
   ReactDOM.render(<div>
 				  	<ImageComponent  {...dataImage} />
 				  	<PromotionalComponent  {...dataPromotional} />
+				  	<p>HOLA</p>
 				  </div>,				  
 				  document.getElementById('root'));
 }
