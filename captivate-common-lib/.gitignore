@@ -1,7 +1,7 @@
 .DS_STORE
 
 #Project Specific Ignores
-node_modules
+#node_modules
 .node_modules_prod/
 build/
 coverage/
