@@ -7,7 +7,7 @@ import PromotionalComponent from './components/PromotionalBlock/index.js';
 
 			
 var xmlhttp = new XMLHttpRequest();
-var url = "https://author.dev.lordabbett.xms.systems";
+var url = "";
 var path = url+window.location.pathname.replace(/html$/,"json")
 console.log("The URL of this page is!!: " + path);
 
