@@ -4,7 +4,7 @@ import {Grid} from '@material-ui/core';
 import {ThemeProvider} from '@material-ui/styles';
 
 import useStyles from './styles';
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import RoleSelection from './RoleSelection';
 
 import GeoSelector from './GeoSelector';

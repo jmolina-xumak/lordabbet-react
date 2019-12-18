@@ -2,7 +2,7 @@
 
 ```jsx
 import { Grid } from '@material-ui/core';
-import { genericImageData } from '../../../public/data/genericImageJSON';
+import { genericImageData } from '../../public/data/genericImageJSON';
 
 <Grid container style={{ padding: 16 }}>
   <Grid item xs={12}>
@@ -15,7 +15,7 @@ import { genericImageData } from '../../../public/data/genericImageJSON';
 
 ```jsx
 import { Grid } from '@material-ui/core';
-import { genericImageDataContain } from '../../../public/data/genericImageJSON';
+import { genericImageDataContain } from '../../public/data/genericImageJSON';
 
 <Grid container style={{ padding: 16 }}>
   <Grid item xs={12}>
@@ -28,7 +28,7 @@ import { genericImageDataContain } from '../../../public/data/genericImageJSON';
 
 ```jsx
 import { Grid } from '@material-ui/core';
-import { genericImageDataCover } from '../../../public/data/genericImageJSON';
+import { genericImageDataCover } from '../../public/data/genericImageJSON';
 
 <Grid container style={{ padding: 16 }}>
   <Grid item xs={12}>
@@ -41,7 +41,7 @@ import { genericImageDataCover } from '../../../public/data/genericImageJSON';
 
 ```jsx
 import { Grid } from '@material-ui/core';
-import { genericImageDataNone } from '../../../public/data/genericImageJSON';
+import { genericImageDataNone } from '../../public/data/genericImageJSON';
 
 <Grid container style={{ padding: 16 }}>
   <Grid item xs={12}>

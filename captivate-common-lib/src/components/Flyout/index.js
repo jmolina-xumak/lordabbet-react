@@ -1,7 +1,7 @@
 import React from 'react';
 import {ThemeProvider} from '@material-ui/styles';
 
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import {FlyoutContainer, ErrorHandler, WarningHandler} from '../../common';
 import {FlyoutAction, FlyoutInfo} from '../../common/FlyoutContent';
 

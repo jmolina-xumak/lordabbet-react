@@ -5,7 +5,7 @@ import {ThemeProvider} from '@material-ui/styles';
 
 import ArticleSummary from '../../common/ArticleSummary';
 import ArticleList from '../../common/ArticleList';
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import {mobileView, ErrorHandler, WarningHandler} from '../../common';
 import useStyles from './styles';
 

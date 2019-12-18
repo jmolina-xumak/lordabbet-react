@@ -9,7 +9,7 @@ import CollectionsBookmarkSharpIcon from '@material-ui/icons/CollectionsBookmark
 import SchoolSharpIcon from '@material-ui/icons/SchoolSharp';
 import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import Promotion from './Promotion';
 import useStyles from './styles';
 import {ErrorHandler, WarningHandler} from '../../common';

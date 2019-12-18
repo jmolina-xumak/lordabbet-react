@@ -5,7 +5,7 @@ import AccessTimeSharp from '@material-ui/icons/AccessTimeSharp';
 
 import useStyles from './styles';
 import {Separator} from '..';
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 
 /**
  * @visibleName ArticleTeaser

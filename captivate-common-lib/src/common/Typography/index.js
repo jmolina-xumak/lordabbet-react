@@ -3,7 +3,7 @@ import {Grid} from '@material-ui/core';
 import * as PropTypes from 'prop-types';
 
 import useStyles from './Styles';
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import {BUTTON, Separator} from '..';
 
 

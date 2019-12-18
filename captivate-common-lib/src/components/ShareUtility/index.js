@@ -7,7 +7,7 @@ import EmailSharpIcon from '@material-ui/icons/EmailSharp';
 import GetAppSharpIcon from '@material-ui/icons/GetAppSharp';
 import {ThemeProvider} from '@material-ui/styles';
 
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import {mobileView, ArrowTooltip, ErrorHandler, WarningHandler} from '../../common';
 
 import useStyles from './styles';

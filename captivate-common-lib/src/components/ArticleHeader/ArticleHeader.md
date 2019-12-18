@@ -5,24 +5,37 @@
 <br/>
 
 ```jsx
-const articleHeader = {
-  data: {
-    category: 'Fixed-income Insights',
-    categoryUrl: undefined,
-    title: 'Designating a Trust as an IRA Beneficiary',
-    date: 'May 15, 2019',
-    timeToRead: '5',
-    description:
-      'Such a strategy can be beneficial, but be sure to consult and experienced attorney and tax professional to navigate the maze of rules'
-  },
-  error: {
-    message: undefined,
-    code: undefined
-  },
-  warning: {
-    warningMessage: undefined
+
+import ReactDOM from 'react-dom';
+
+var xmlhttp = new XMLHttpRequest();
+var url = "http://localhost:4502/content/lordabbett/data.json";
+
+
+function myFunction(json) {
+  
+  var obj = JSON.parse(json);
+						   
+  articleHeader=obj;
+
+  ReactDOM.render(React.createElement(ArticleHeader, {...articleHeader} ), document.getElementById('rsg-root'));
+}
+
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {   
+    myFunction(this.responseText);
   }
 };
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+	
 
-<ArticleHeader {...articleHeader} />;
+
+
+
+//React.createElement(ArticleHeader, {...articleHeader} );
+
 ```
+
+

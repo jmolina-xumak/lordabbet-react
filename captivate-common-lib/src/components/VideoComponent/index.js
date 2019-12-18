@@ -2,7 +2,7 @@ import React from 'react';
 import {ThemeProvider} from '@material-ui/styles';
 import {Grid} from '@material-ui/core';
 
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import {PopupContainer, ErrorHandler, WarningHandler, VideoPlayer} from '../../common';
 import useStyles from './styles';
 

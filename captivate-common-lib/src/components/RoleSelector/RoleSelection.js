@@ -3,7 +3,7 @@ import * as PropTypes from 'prop-types';
 import * as ReactGA from 'react-ga';
 import {Grid} from '@material-ui/core';
 
-import {GA_KEY, GA_PROD_KEY} from '../../../public/constants';
+import {GA_KEY, GA_PROD_KEY} from '../../public/constants';
 import {mobileView} from '../../common';
 
 const RoleSelection = (props) => {

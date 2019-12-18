@@ -2,7 +2,7 @@ import React from 'react';
 import ReactPlayerLoader from '@brightcove/react-player-loader';
 
 import useStyles from './styles';
-import {BRIGHTCOVE_ACCOUNT, BRIGHTCOVE_PLAYER, BRIGHTCOVE_GENERIC_PLAYER} from '../../../public/constants';
+import {BRIGHTCOVE_ACCOUNT, BRIGHTCOVE_PLAYER, BRIGHTCOVE_GENERIC_PLAYER} from '../../public/constants';
 
 const VideoPlayer = (props) => {
     const {videoId} = props;

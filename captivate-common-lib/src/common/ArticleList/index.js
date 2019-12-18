@@ -4,7 +4,7 @@ import {ThemeProvider} from '@material-ui/styles';
 
 import useStyles from './styles';
 import {Separator, mobileView} from '..';
-import theme from '../../../public/assets/theme';
+import theme from '../../public/assets/theme';
 import ArticleTeaser from '../ArticleTeaser';
 
 /**

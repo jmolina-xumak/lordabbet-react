@@ -1,25 +1,38 @@
-import RoleSelector from './components/RoleSelector';
-import RoleSelection from './components/RoleSelector/RoleSelection';
-import Authors from './components/Authors';
-import ArticleHeader from './components/ArticleHeader';
-import ShareUtility from './components/ShareUtility';
-import PromotionalBlock from './components/PromotionalBlock';
-import RecommendedForYou from './components/RecommendedForYou';
-import Flyout from './components/Flyout';
-import CookieDisclaimer from './components/CookieDisclaimer';
-import VideoComponent from './components/VideoComponent';
-import ImageComponent from './components/ImageComponent';
+import React from 'react';
+import ReactDOM from 'react-dom';
+import ArticleHeader from './components/ArticleHeader/index.js';
+import ImageComponent from './components/ImageComponent/index.js';
+import PromotionalComponent from './components/PromotionalBlock/index.js';
 
-export {
-    RoleSelector,
-    RoleSelection,
-    Authors,
-    ArticleHeader,
-    ShareUtility,
-    PromotionalBlock,
-    RecommendedForYou,
-    Flyout,
-    CookieDisclaimer,
-    VideoComponent,
-    ImageComponent
+
+			
+var xmlhttp = new XMLHttpRequest();
+var url = "https://author.dev.lordabbett.xms.systems/content/lordabbett/fr.react.json";
+
+
+function render(json) {
+  
+  var obj = JSON.parse(json);
+	
+  var dataImage={data:{}};	
+  var dataPromotional={data:{}};
+	
+  dataImage.data=obj.data.imageContentReferenceData;
+  dataPromotional.data=obj.data.contentFragmentContentReference2Data;
+  		
+  ReactDOM.render(<div>
+				  	<ImageComponent  {...dataImage} />
+				  	<PromotionalComponent  {...dataPromotional} />
+				  </div>,				  
+				  document.getElementById('root'));
+}
+
+
+xmlhttp.onreadystatechange = function() {
+  if (this.readyState == 4 && this.status == 200) {   
+    render(this.responseText);
+  }
 };
+xmlhttp.open("GET", url, true);
+xmlhttp.send();
+	
