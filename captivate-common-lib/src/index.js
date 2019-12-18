@@ -35,6 +35,6 @@ xmlhttp.onreadystatechange = function() {
     render(this.responseText);
   }
 };
-xmlhttp.open("GET", url, true);
+xmlhttp.open("GET", path, true);
 xmlhttp.send();
 	
