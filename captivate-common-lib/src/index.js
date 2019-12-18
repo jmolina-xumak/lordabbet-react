@@ -22,7 +22,7 @@ function render(json) {
   dataPromotional.data=obj.data.contentFragmentContentReference2Data;
 
   		console.log(dataImage);
-  ReactDOM.render(<div style={{width: 10 + 'em'}}>
+  ReactDOM.render(<div>
 				  	<ImageComponent  {...dataImage} />
 				  	<PromotionalComponent  {...dataPromotional} />
 				  </div>,
