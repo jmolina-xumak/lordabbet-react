@@ -9,7 +9,7 @@ import PromotionalComponent from './components/PromotionalBlock/index.js';
 var xmlhttp = new XMLHttpRequest();
 var url = "";
 var path = url+window.location.pathname.replace(/html$/,"json")
-console.log("The URL of this page is!!: " + path);
+console.log("The URL of this page is: " + path);
 
 function render(json) {
   
@@ -22,7 +22,7 @@ function render(json) {
   dataPromotional.data=obj.data.contentFragmentContentReference2Data;
 
   		console.log(dataImage);
-  ReactDOM.render(<div>
+  ReactDOM.render(<div style={{width: 10 + 'em'}}>
 				  	<ImageComponent  {...dataImage} />
 				  	<PromotionalComponent  {...dataPromotional} />
 				  </div>,
