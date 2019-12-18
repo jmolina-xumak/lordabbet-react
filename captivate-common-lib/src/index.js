@@ -7,8 +7,8 @@ import PromotionalComponent from './components/PromotionalBlock/index.js';
 
 			
 var xmlhttp = new XMLHttpRequest();
-var url = "https://author.dev.lordabbett.xms.systems/content/lordabbett/fr.react.json";
-
+var url = "https://author.dev.lordabbett.xms.systems";
+var path = url+window.location.pathname.replace(/html$/,"json")
 
 function render(json) {
   
@@ -20,12 +20,11 @@ function render(json) {
   dataImage.data=obj.data.imageContentReferenceData;
   dataPromotional.data=obj.data.contentFragmentContentReference2Data;
 
-  		alert("The URL of this page is: " + window.location.pathname);
+  		console.log("The URL of this page is: " + path);
   ReactDOM.render(<div>
 				  	<ImageComponent  {...dataImage} />
 				  	<PromotionalComponent  {...dataPromotional} />
-				  	<p>HOLA</p>
-				  </div>,				  
+				  </div>,
 				  document.getElementById('root'));
 }
 
