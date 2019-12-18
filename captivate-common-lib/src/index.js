@@ -21,8 +21,8 @@ function render(json) {
   dataImage.data=obj.data.imageContentReferenceData;
   dataPromotional.data=obj.data.contentFragmentContentReference2Data;
 
-  		console.log("The URL of this page is: " + path);
-  ReactDOM.render(<div>
+  		console.log(dataImage);
+  ReactDOM.render(<div style={{width: 10 + 'em'}}>
 				  	<ImageComponent  {...dataImage} />
 				  	<PromotionalComponent  {...dataPromotional} />
 				  </div>,
