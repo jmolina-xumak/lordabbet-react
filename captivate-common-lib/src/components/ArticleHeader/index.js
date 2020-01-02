@@ -66,7 +66,7 @@ const ArticleHeader = (props) => {
                             {!!timeToRead && (
                                 <>
                                     <span className={classes.dot}></span>
-                                    <span data-testid="articleTimeToRead">{timeToRead} min read</span>
+                                    <span data-testid="articleTimeToRead">{timeToRead} min read..</span>
                                 </>
                             )}
                         </Grid>
