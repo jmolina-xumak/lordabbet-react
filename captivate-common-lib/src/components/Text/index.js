@@ -39,7 +39,7 @@ const Text = (props) => {
                                 classes.mobileText}`}
                             data-testid="articleText"
                         >
-                            {text}HELLO WORLD
+                            {text}
                         </Grid>
                     )}
 
