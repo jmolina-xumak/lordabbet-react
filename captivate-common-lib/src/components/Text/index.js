@@ -34,7 +34,7 @@ const Text = (props) => {
                     {!!text && (
                         <Grid
                             item
-                            xl={12}
+                            xl={1}
                             className={`${classes.description} ${!!isMobile &&
                                 classes.mobileText}`}
                             data-testid="articleText"
